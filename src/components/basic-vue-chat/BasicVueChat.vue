@@ -22,6 +22,7 @@
         <slot name="input-container">
           <input-container
             :toggle-emoji-picker="toggleEmojiPicker"
+            :send-button-text="sendButtonText"
             @newOwnMessage="onNewOwnMessage"
             @openEmojiPicker="onOpenEmojiPicker"
           />
@@ -44,6 +45,11 @@ export default {
     InputContainer
   },
   props: {
+    sendButtonText: {
+      type: String,
+      default: 'Senden',
+      required: false
+    },
     title: {
       type: String,
       default: 'Team Maczan',

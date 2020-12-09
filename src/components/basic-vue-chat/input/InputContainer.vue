@@ -46,14 +46,17 @@
       <slot name="features" />
     </div>
     <slot name="input-button">
-      <input-button @newOwnMessage="onNewOwnMessage" />
+      <div
+              class="input__button"
+              @click="send">
+        {{sendButtonText}}
+      </div>
     </slot>
   </div>
 </template>
 
 <script>
 import InputField from './InputField.vue'
-import InputButton from './InputButton.vue'
 import { Picker } from 'emoji-mart-vue'
 
 export default {
@@ -64,6 +67,11 @@ export default {
     Picker
   },
   props: {
+      sendButtonText: {
+        type: String,
+        default:'Senden',
+        required: false
+      },
     toggleEmojiPicker: {
       type: Boolean,
       default: false,

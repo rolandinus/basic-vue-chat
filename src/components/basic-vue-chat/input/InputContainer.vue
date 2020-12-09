@@ -47,9 +47,9 @@
     </div>
     <slot name="input-button">
       <div
-              class="input__button"
-              @click="send">
-        {{sendButtonText}}
+        class="input__button"
+        @click="onNewOwnMessage">
+        {{ sendButtonText }}
       </div>
     </slot>
   </div>
@@ -63,15 +63,14 @@ export default {
   name: 'InputContainer',
   components: {
     InputField,
-    InputButton,
     Picker
   },
   props: {
-      sendButtonText: {
-        type: String,
-        default:'Senden',
-        required: false
-      },
+    sendButtonText: {
+      type: String,
+      default: 'Senden',
+      required: false
+    },
     toggleEmojiPicker: {
       type: Boolean,
       default: false,

@@ -94,19 +94,8 @@ export default {
     }
   },
   mounted () {
-    if (this.attachMock) {
-      import('./mocks/mock-messages-list.js')
-        .then(mockData => {
-          this.feed = mockData.default.feed
-          this.setAuthorId(mockData.default.authorId)
-        })
-        .catch(error => {
-          console.error('Failed to load mock data from file. ', error)
-        })
-    } else {
-      this.feed = this.initialFeed
-      this.authorId = this.initialAuthorId
-    }
+    this.feed = this.initialFeed
+    this.authorId = this.initialAuthorId
   },
   methods: {
     setEmojiPickerToggle (toggle) {

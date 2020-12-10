@@ -4,8 +4,8 @@
       :value="value"
       type="text"
       name="message"
-      aria-placeholder="Type message..."
-      placeholder="Type message..."
+      aria-placeholder="Nachricht eingeben..."
+      placeholder="Nachricht eingeben..."
       autofocus
       @input="$emit('input', $event.target.value)"
       @keyup.enter.prevent="send"><br>

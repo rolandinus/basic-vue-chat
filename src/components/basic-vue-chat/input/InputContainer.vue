@@ -19,7 +19,7 @@
           accept="image/*"
           @change="handleFileUpload()">
           <label for="image">
-            <font-awesome-icon icon="paperclip" />
+            <!-- <font-awesome-icon icon="paperclip" /> -->
           </label>
         </div>
       </div>
@@ -28,7 +28,7 @@
           id="emoji"
           @click="openEmojiPicker">
           <label for="emoji">
-            <font-awesome-icon icon="smile" />
+            <!-- <font-awesome-icon icon="smile" /> -->
           </label>
         </div>
       </div>

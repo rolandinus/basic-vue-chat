@@ -80,7 +80,7 @@ export default {
       required: false
     }
   },
-  data: function () {
+  data () {
     return {
       feed: [],
       authorId: 0,

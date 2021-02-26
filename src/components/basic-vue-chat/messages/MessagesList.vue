@@ -3,8 +3,8 @@
     name="messages-list"
     tag="div">
     <div
-      v-for="(message, index) in feed"
-      :key="index"
+      v-for="(message) in feed"
+      :key="message.id + message.date"
       class="messages-list-item">
       <message-own
         v-if="message.id === authorId"

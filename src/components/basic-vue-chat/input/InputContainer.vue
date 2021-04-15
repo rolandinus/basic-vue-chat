@@ -11,17 +11,18 @@
     </slot>
     <div class="features__container">
       <div class="input-images-upload">
-        <div
-          id="image"
+        <input
+          id="chat-input-image"
           ref="image"
           type="file"
-          class="image"
           accept="image/*"
           @change="handleFileUpload()">
-          <label for="image">
-            <!-- <font-awesome-icon icon="paperclip" /> -->
-          </label>
-        </div>
+        <label for="chat-input-image">
+          <img
+            v-if="uploadIconSrc"
+            :src="uploadIconSrc">
+          <span v-else>&#128206;</span>
+        </label>
       </div>
       <div class="input-images-upload input-emoji-picker__icon">
         <div
@@ -74,6 +75,11 @@ export default {
     toggleEmojiPicker: {
       type: Boolean,
       default: false,
+      required: false
+    },
+    uploadIconSrc: {
+      type: String,
+      default: null,
       required: false
     }
   },

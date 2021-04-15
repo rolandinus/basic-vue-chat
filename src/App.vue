@@ -1,6 +1,8 @@
 <template>
   <div id="app">
-    <basic-vue-chat :new-message="message" />
+    <basic-vue-chat
+      :new-message="message"
+      upload-icon-src="paperclip.png"/>
   </div>
 </template>
 

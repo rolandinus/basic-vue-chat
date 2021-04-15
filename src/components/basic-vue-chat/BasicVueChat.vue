@@ -15,7 +15,7 @@
           <messages-list
             :feed="feed"
             :author-id="authorId"
-            class="messages-list" />
+            class="messages-list"/>
         </slot>
       </section>
       <div class="window__input__container">
@@ -23,6 +23,7 @@
           <input-container
             :toggle-emoji-picker="toggleEmojiPicker"
             :send-button-text="sendButtonText"
+            :upload-icon-src="uploadIconSrc"
             @newOwnMessage="onNewOwnMessage"
             @openEmojiPicker="onOpenEmojiPicker"
           />
@@ -78,6 +79,12 @@ export default {
         return {}
       },
       required: false
+    },
+    uploadIconSrc: {
+      type: String,
+      required: false,
+      default: null
+
     }
   },
   data () {
@@ -127,5 +134,5 @@ export default {
 </script>
 
 <style lang="scss">
-@import "../../assets/scss/main.scss";
+    @import "../../assets/scss/main.scss";
 </style>

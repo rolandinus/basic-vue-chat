@@ -125,13 +125,10 @@ export default {
 
       scrollToBottom()
 
-      this.$emit('newOwnMessage', message)
+      this.$emit('newOwnMessage', message, image)
     },
     onOpenEmojiPicker (toggle) {
       this.setEmojiPickerToggle(toggle)
-    },
-    onNewFileUpload (file) {
-      this.$emit('newFileUpload', file)
     }
   }
 }

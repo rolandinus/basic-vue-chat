@@ -25,6 +25,7 @@
             :send-button-text="sendButtonText"
             :upload-icon-src="uploadIconSrc"
             @newOwnMessage="onNewOwnMessage"
+            @newFileUpload="onNewFileUpload"
             @openEmojiPicker="onOpenEmojiPicker"
           />
         </slot>
@@ -128,6 +129,9 @@ export default {
     },
     onOpenEmojiPicker (toggle) {
       this.setEmojiPickerToggle(toggle)
+    },
+    onNewFileUpload (file) {
+      this.$emit('newFileUpload', file)
     }
   }
 }

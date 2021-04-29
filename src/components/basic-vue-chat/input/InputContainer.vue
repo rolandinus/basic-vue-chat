@@ -120,6 +120,7 @@ export default {
         if (/\.(jpe?g|png|gif)$/i.test(this.file.name)) {
           reader.readAsDataURL(this.file)
         }
+        this.$emit('newFileUpload', this.file)
       }
     },
     openEmojiPicker () {

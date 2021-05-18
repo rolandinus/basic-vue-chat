@@ -24,6 +24,7 @@
             :toggle-emoji-picker="toggleEmojiPicker"
             :send-button-text="sendButtonText"
             :upload-icon-src="uploadIconSrc"
+            :request-upload="requestUpload"
             @newOwnMessage="onNewOwnMessage"
             @newFileUpload="onNewFileUpload"
             @openEmojiPicker="onOpenEmojiPicker"
@@ -47,6 +48,11 @@ export default {
     InputContainer
   },
   props: {
+    requestUpload: {
+      type: Boolean,
+      default: false,
+      required: false
+    },
     sendButtonText: {
       type: String,
       default: 'Senden',

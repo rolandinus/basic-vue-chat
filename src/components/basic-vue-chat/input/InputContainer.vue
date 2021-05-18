@@ -10,7 +10,9 @@
         @newOwnMessage="onNewOwnMessage" />
     </slot>
     <div class="features__container">
-      <div class="input-images-upload">
+      <div
+        :class="requestUpload ? 'highlight' : ''"
+        class="input-images-upload">
         <input
           id="chat-input-image"
           ref="image"
@@ -67,6 +69,11 @@ export default {
     Picker
   },
   props: {
+    requestUpload: {
+      type: Boolean,
+      default: false,
+      required: false
+    },
     sendButtonText: {
       type: String,
       default: 'Senden',
@@ -136,5 +143,20 @@ export default {
 <style lang="scss" scoped>
 .visible {
   display: none;
+}
+.highlight {
+  animation: blink 1s steps(1, end) infinite;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 </style>
